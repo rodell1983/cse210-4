@@ -19,6 +19,7 @@ class Cast:
             group (string): The name of the group.
             actor (Actor): The actor to add.
         """
+        # print(actor, group)
         if not group in self._actors.keys():
             self._actors[group] = []
             

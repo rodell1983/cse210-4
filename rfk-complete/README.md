@@ -1,5 +1,9 @@
-# Robot Finds Kitten
-Simon Carless once described robotfindskitten as "less a game and more a way of life ... It's fun to wander around until you find a kitten, at which point you feel happy and can start again". I don't think I could have said it better myself!
+# cse210-03
+CSE210, Week 7 team group assignment, Greed Game
+
+
+# Greed
+Welcome to the Greed Game Dozens of rocks and gems will be falling. Try to catch as make gems as possible to get points. But beware of the rocks. You will lose twice as many points if you get hit by a rock. You can move left and right but not up or down.
 
 ## Getting Started
 ---
@@ -9,28 +13,45 @@ python3 -m pip install raylib
 ```
 After you've installed the required libraries, open a terminal and browse to the project's root folder. Start the program by running the following command.```
 
-python3 rfk 
+python3 greed
 ```
 You can also run the program from an IDE like Visual Studio Code. Start your IDE and open the 
 project folder. Select the main module inside the hunter folder and click the "run" icon.
+
 
 ## Project Structure
 ---
 The project files and folders are organized as follows:
 ```
-root                    (project root folder)
-+-- rfk                 (source code for game)
-  +-- data              (data files for game)
-  +-- game              (specific game classes)
-  +-- __main__.py       (entry point for program)
-+-- README.md           (general info)
+root                   	     (project root folder)
+  +--__main__.py		         (program entry point)
+  +--README.md			         (general info)
+  +--game/
+    +--casting/
+      +--actor.py             (game class with methods)
+      +--rock.py              (game class with methods)
+      +--gem.py               (game class with methods)
+      +--artifact.py          (game class with methods)
+    +--directing/ 
+      +--director.py          (game class with methods)
+    +--services/
+      +--keyboard_service.py  (game class with methods)
+      +--video_service.py     (game class with methods)
+    +--shared/
+      +--color.py             (game class with methods)
+      +--point.py             (game class with methods)
+
 ```
 
 ## Required Technologies
 ---
-* Python 3.8.0
-* Raylib Python CFFI 3.7
+* Python 3.10.1
+* Raylib
 
 ## Authors
 ---
-* # TODO: Add your name and email here
+* [Cameron Barrett](https://github.com/Cams1stGitHub) 
+* [Robert Odell](https://github.com/rodell1983)
+* [Wilson Romero](https://github.com/wilsonBYU)
+* [Nourcel Kaniki](https://github.com/Nourcel)
+

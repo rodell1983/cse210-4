@@ -5,14 +5,17 @@ CSE210, Week 7 team group assignment, Greed Game
 # Greed
 Welcome to the Greed Game. Dozens of rocks and gems will be falling from above. Try to catch as make gems as possible to get points. But beware of the rocks. You will lose twice as many points if you get hit by a rock. You can move left and right but not up or down.
 
+
 ## Getting Started
 ---
 Make sure you have Python 3.8.0 or newer and Raylib Python CFFI 3.7 installed and running on your machine. You can install Raylib Python CFFI by opening a terminal and running the following command.
+
 ```
 python3 -m pip install raylib
 ```
-After you've installed the required libraries, open a terminal and browse to the project's root folder. Start the program by running the following command.```
+After you've installed the required libraries, open a terminal and browse to the project's root folder. Start the program by running the following command.
 
+```
 python3 greed
 ```
 You can also run the program from an IDE like Visual Studio Code. Start your IDE and open the 
@@ -47,6 +50,7 @@ root                   	         (project root folder)
 ## Required Technologies
 ---
 * Python 3.10.1
+* raylib
 
 ## Authors
 ---
@@ -54,4 +58,6 @@ root                   	         (project root folder)
 * [Robert Odell](https://github.com/rodell1983)
 * [Wilson Romero](https://github.com/wilsonBYU)
 * [Nourcel Kaniki](https://github.com/Nourcel)
+* [Jens0n Smith](https://github.com/Jfunky11)
+
 

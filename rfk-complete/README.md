@@ -23,15 +23,24 @@ project folder. Select the main module inside the hunter folder and click the "r
 ---
 The project files and folders are organized as follows:
 ```
-root                   	    (project root folder)
-  +--__main__.py		    (program entry point)
-  +--README.md			    (general info)
-  +--game/           	    (modules)
-    +--instructions.py      (big menu and instructions)
-    +--Jumper.py		    (source code for game)
-    +--puzzle.py            (game class with methods)
-    +--terminal_service.py  (game class with methods)
-    +--director.py		    (Game logic)
+root                   	         (project root folder)
+  +--__main__.py		             (program entry point)
+  +--README.md			             (general info)
+  +--game
+    +--casting/
+      +--actor.py                (game class with methods)
+      +--artifact.py             (game class with methods)
+      +--cast.py                 (game class with methods)
+      +--gem.py                  (game class with methods)
+      +--rock.py                 (game class with methods)
+    +--directing/
+      +--director.py             (game class with methods)
+    +--services/
+      +--keyboard-services.py    (game class with methods)
+      +--video-services.py       (game class with methods)
+    +--shared/
+      +--color.py                (game class with methods)
+      +--point.py                (game class with methods)
 
 ```
 

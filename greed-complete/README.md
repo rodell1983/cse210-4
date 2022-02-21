@@ -3,7 +3,7 @@ CSE210, Week 7 team group assignment, Greed Game
 
 
 # Greed
-Welcome to the Greed Game Dozens of rocks and gems will be falling. Try to catch as make gems as possible to get points. But beware of the rocks. You will lose twice as many points if you get hit by a rock. You can move left and right but not up or down.
+Welcome to the Greed Game. Dozens of rocks and gems will be falling from above. Try to catch as make gems as possible to get points. But beware of the rocks. You will lose twice as many points if you get hit by a rock. You can move left and right but not up or down.
 
 ## Getting Started
 ---

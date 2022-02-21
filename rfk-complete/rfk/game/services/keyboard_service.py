@@ -1,3 +1,4 @@
+
 import pyray
 from game.shared.point import Point
 

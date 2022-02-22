@@ -1,6 +1,6 @@
 from game.casting.actor import Actor
 
-class rock(Actor):
+class Rock(Actor):
     def __init__(self):
         super().__init__()
         self._value = -10

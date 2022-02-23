@@ -33,7 +33,7 @@ class Director:
         Args:
             cast (Cast): The cast of actors.
         """
-        # self.populate_lists()
+
         self._video_service.open_window()
         while self._video_service.is_window_open():
             self._get_inputs(cast)
@@ -76,8 +76,6 @@ class Director:
             if actor.get_group() == "gems" or actor.get_group() == "rocks":
                 actor.move_next(max_x, max_y)
                 if robot.get_position().equals(actor.get_position()):
-                    # message = rock.get_message()
-                    # banner.set_text(message)
                     cast.remove_actor(actor.get_group(), actor)
                     self._score += actor.get_value()
 

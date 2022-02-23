@@ -1,4 +1,3 @@
-from tokenize import group
 from game.shared.color import Color
 from game.shared.point import Point
 
@@ -27,6 +26,11 @@ class Actor:
         self._group = ""
     
     def get_group(self):
+        """Gets the actor's group as a string
+        
+        Returns:
+            String: The actor's group name.
+        """
         return self._group
         
 
@@ -83,6 +87,11 @@ class Actor:
         self._position = Point(x, y)
     
     def set_group(self, group):
+        """Updates the group to the given one.
+        
+        Args:
+            group (string): The given name.
+        """
         self._group = group
 
     def set_color(self, color):

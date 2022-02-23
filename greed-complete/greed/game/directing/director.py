@@ -50,6 +50,16 @@ class Director:
         """
         robot = cast.get_first_actor("robots")
         velocity = self._keyboard_service.get_direction()
+
+        # Restrict movement below bottom
+        if velocity.get_y() < 0:
+            if robot.get_position().get_y() <= 450:
+                velocity = Point(velocity.get_x(), 0)
+        # Restrict movement above 450
+        if velocity.get_y() > 0:
+            if robot.get_position().get_y() > 579:
+                velocity = Point(velocity.get_x(), 0)
+
         robot.set_velocity(velocity)
         actors = cast.get_all_actors()
         for actor in actors:
@@ -67,7 +77,7 @@ class Director:
         robot = cast.get_first_actor("robots")
         all_actors = cast.get_all_actors()
 
-        banner.set_text(str(self._score))
+        banner.set_text(f"Score: {self._score}")
         max_x = self._video_service.get_width()
         max_y = self._video_service.get_height()
         robot.move_next(max_x, max_y)

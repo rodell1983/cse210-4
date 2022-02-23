@@ -67,6 +67,11 @@ class Director:
         robot = cast.get_first_actor("robots")
         all_actors = cast.get_all_actors()
 
+        x = random.randint(1, 59)
+        y = random.randint(1, 39)
+        position = Point(x, y)
+        position = position.scale(15)
+
         banner.set_text(f"Score: {self._score}")
         max_x = self._video_service.get_width()
         max_y = self._video_service.get_height()
@@ -75,7 +80,9 @@ class Director:
             if actor.get_group() == "gems" or actor.get_group() == "rocks":
                 actor.move_next(max_x, max_y)
                 if robot.get_position().equals(actor.get_position()):
-                    cast.remove_actor(actor.get_group(), actor)
+                    # cast.remove_actor(actor.get_group(), actor)
+                    actor.set_position(position)
+
                     self._score += actor.get_value()
 
 

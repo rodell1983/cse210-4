@@ -1,24 +1,15 @@
-from tkinter import Y
 import pyray
 import random
-
 from game.shared.point import Point
-
-
-
 class Director:
     """A person who directs the game.
-
     The responsibility of a Director is to control the sequence of play.
-
     Attributes:
         _keyboard_service (KeyboardService): For getting directional input.
         _video_service (VideoService): For providing video output.
     """
-
     def __init__(self, keyboard_service, video_service):
         """Constructs a new Director using the specified keyboard and video services.
-
         Args:
             keyboard_service (KeyboardService): An instance of KeyboardService.
             video_service (VideoService): An instance of VideoService.
@@ -30,11 +21,10 @@ class Director:
 
     def start_game(self, cast):
         """Starts the game using the given cast. Runs the main game loop.
-
         Args:
             cast (Cast): The cast of actors.
         """
-        
+
         self._video_service.open_window()
         while self._video_service.is_window_open():
             self._get_inputs(cast)
@@ -42,9 +32,9 @@ class Director:
             self._do_outputs(cast)
         self._video_service.close_window()
 
+
     def _get_inputs(self, cast):
         """Gets directional input from the keyboard and applies it to the robot.
-
         Args:
             cast (Cast): The cast of actors.
         """
@@ -67,9 +57,9 @@ class Director:
                 actors_velocity = Point(0, 1)
                 actor.set_velocity(actors_velocity)
 
+
     def _do_updates(self, cast):
         """Updates the robot's position and resolves any collisions with artifacts.
-
         Args:
             cast (Cast): The cast of actors.
         """
@@ -81,8 +71,6 @@ class Director:
         max_x = self._video_service.get_width()
         max_y = self._video_service.get_height()
         robot.move_next(max_x, max_y)
-
-
         for actor in all_actors:
             if actor.get_group() == "gems" or actor.get_group() == "rocks":
                 actor.move_next(max_x, max_y)
@@ -93,7 +81,6 @@ class Director:
 
     def _do_outputs(self, cast):
         """Draws the actors on the screen.
-
         Args:
             cast (Cast): The cast of actors.
         """
@@ -101,5 +88,3 @@ class Director:
         actors = cast.get_all_actors()
         self._video_service.draw_actors(actors)
         self._video_service.flush_buffer()
-
-    

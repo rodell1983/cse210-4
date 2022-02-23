@@ -3,7 +3,6 @@ import random
 import pyray
 
 from game.casting.actor import Actor
-from game.casting.artifact import Artifact
 from game.casting.cast import Cast
 
 from game.directing.director import Director

@@ -88,33 +88,5 @@ class Director:
         """
         self._video_service.clear_buffer()
         actors = cast.get_all_actors()
-        # print(actors)
         self._video_service.draw_actors(actors)
         self._video_service.flush_buffer()
-
-    #     for i in range(self.list_size):
-    #         pyray.draw_text('*', self.gem_list[i][0], self.gem_list[i][1], 30, (255, 255, 255))
-    #         self.gem_list[i][1] += 4
-    #         if self.gem_list[i][1] > 600:
-    #             y = random.randrange(-50, -10)
-    #             self.gem_list[i][1] = y
-    #             x = random.randrange(0, 900)
-    #             self.gem_list[i][0] = x
-
-    #     for i in range(self.list_size):
-    #         pyray.draw_text('o', self.rock_list[i][0], self.rock_list[i][1], 30, (255, 255, 255))
-    #         self.rock_list[i][1] += 4
-    #         if self.rock_list[i][1] > 600:
-    #             y = random.randrange(-50, -10)
-    #             self.rock_list[i][1] = y
-    #             x = random.randrange(0, 900)
-    #             self.rock_list[i][0] = x
-
-    # def populate_lists(self):
-    #     for i in range(self.list_size):
-    #         rock_x = random.randrange(0, 900)
-    #         rock_y = random.randrange(-600, 50)
-    #         snow_x = random.randrange(0, 900)
-    #         snow_y = random.randrange(-600, 50)
-    #         self.rock_list.append([rock_x, rock_y])
-    #         self.gem_list.append([snow_x, snow_y])

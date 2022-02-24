@@ -12,6 +12,7 @@ class Gem(Actor):
     """
 
     def __init__(self):
+        """Constructs a new Gem."""
         super().__init__()
         self._value = 5
 

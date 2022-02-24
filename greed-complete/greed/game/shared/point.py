@@ -42,6 +42,22 @@ class Point:
             boolean: True if both x and y are equal; false if otherwise.
         """
         return self._x == other.get_x() and self._y == other.get_y()
+        
+    def bounding_equals(self, other):
+        """Calculates if the other point is inside the bounding box of this point.
+        
+        Args:
+            other (Point): An instance of Point.
+        
+        Returns:
+            boolean: True if other point is inside of the bounding box.
+        """
+        bounding_x = other.get_x() >= self._x and other.get_x() <= self._x + 7
+        bounding_y = other.get_y() >= self._y and other.get_y() <= self._y + 15
+        if bounding_x and bounding_y:
+            return True
+        return False
+
 
     def get_x(self):
         """Gets the horizontal distance.

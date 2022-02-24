@@ -1,6 +1,7 @@
-import pyray
 import random
+
 from game.shared.point import Point
+
 class Director:
     """A person who directs the game.
     The responsibility of a Director is to control the sequence of play.
@@ -55,7 +56,7 @@ class Director:
         actors = cast.get_all_actors()
         for actor in actors:
             if actor.get_group() == "gems" or actor.get_group() == "rocks":
-                actors_velocity = Point(0, 1)
+                actors_velocity = Point(0, random.randint(1, 10))
                 actor.set_velocity(actors_velocity)
 
 
@@ -73,17 +74,26 @@ class Director:
         max_y = self._video_service.get_height()
         robot.move_next(max_x, max_y)
         for actor in all_actors:
-            x = random.randint(1, 59)
-            y = random.randint(1, 39)
+            x = random.randint(1, 60)
+            y = random.randint(1, 15)
             position = Point(x, y)
             position = position.scale(15)
             if actor.get_group() == "gems" or actor.get_group() == "rocks":
                 actor.move_next(max_x, max_y)
-                if robot.get_position().equals(actor.get_position()):
-                    # cast.remove_actor(actor.get_group(), actor)
-                    actor.set_position(position)
-
-                    self._score += actor.get_value()
+                self._update_positions(robot, actor, position)
+                         
+    def _update_positions(self, robot, actor, position):
+        """Draws the actors on the screen.
+        Args:
+            self (Cast): Instance of Cast.
+            robot (Robot): the player robot
+            actor (Actor): Instance of actor
+            position (Point): Instance of point
+        """
+        if robot.get_position().bounding_equals(actor.get_position()):
+            actor.set_position(position)
+            self._score += actor.get_value()        
+        
 
 
     def _do_outputs(self, cast):

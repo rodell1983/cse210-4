@@ -1,6 +1,4 @@
-import os
 import random
-import pyray
 
 from game.casting.actor import Actor
 from game.casting.cast import Cast
@@ -24,7 +22,6 @@ FONT_SIZE = 15
 COLS = 60
 ROWS = 40
 CAPTION = "Greed"
-# DATA_PATH = os.path.dirname(os.path.abspath(__file__)) + "/data/messages.txt"
 WHITE = Color(255, 255, 255)
 DEFAULT_ROCKS = 200
 DEFAULT_GEMS = 200
@@ -45,7 +42,7 @@ def main():
 
     # create the robot
     x = int(420)
-    y = int(580)
+    y = int(585)
     position = Point(x, y)
 
     robot = Actor()
@@ -56,19 +53,12 @@ def main():
     robot.set_group("robots")
     cast.add_actor("robots", robot)
 
-    # create the artifacts
-    # with open(DATA_PATH) as file:
-    #     data = file.read()
-        # messages = data.splitlines()
-
     def generate_ranges(main_class, default_amount, text, group):
-
-        actors = []
+        """Generating a given number of instances from a given class"""
         for _ in range(default_amount):
 
-
             x = random.randint(1, COLS - 1)
-            y = random.randint(1, ROWS - 1)
+            y = random.randint(1, 6)
             position = Point(x, y)
             position = position.scale(CELL_SIZE)
 
@@ -83,15 +73,13 @@ def main():
             actor.set_color(color)
             actor.set_position(position)
             actor.set_group(group)
-            actors.append(actor)
-        for actor in actors:
             cast.add_actor(actor.get_group(), actor)
 
     # start the game
     generate_ranges(Gem, DEFAULT_GEMS, '*', 'gems')
     generate_ranges(Rock, DEFAULT_ROCKS, 'o', 'rocks')
     keyboard_service = KeyboardService(CELL_SIZE)
-    video_service = VideoService(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE)
+    video_service = VideoService(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE, True)
     director = Director(keyboard_service, video_service)
     director.start_game(cast)
 

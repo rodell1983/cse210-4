@@ -10,6 +10,7 @@ class Rock(Actor):
         _value (int): Points lost upon contact.
     """
     def __init__(self):
+        """Constructs a new Rock."""
         super().__init__()
         self._value = -10
 

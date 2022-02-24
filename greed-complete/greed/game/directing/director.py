@@ -42,11 +42,11 @@ class Director:
         robot = cast.get_first_actor("robots")
         velocity = self._keyboard_service.get_direction()
 
-        # Restrict movement below bottom
+        # Restrict movement above the 450 line
         if velocity.get_y() < 0:
             if robot.get_position().get_y() <= 450:
                 velocity = Point(velocity.get_x(), 0)
-        # Restrict movement above 450
+        # Restrict movement below bottom
         if velocity.get_y() > 0:
             if robot.get_position().get_y() > 579:
                 velocity = Point(velocity.get_x(), 0)

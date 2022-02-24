@@ -3,7 +3,7 @@ CSE210, Week 7 team group assignment, Greed
 
 
 # Greed
-Welcome to the Greed game. Dozens of rocks and gems will be falling from above. Try to catch as make gems as possible to get points, but beware of the rocks. You will lose twice as many points if you get hit by a rock. You can move left and right but not up or down.
+Welcome to the Greed game. Dozens of rocks and gems will be falling from above. Try to catch as make gems as possible to get points, but beware of the rocks. You will lose twice as many points if you get hit by a rock. You can move left, right and up or down in limited range.
 
 
 ## Getting Started
@@ -34,7 +34,6 @@ root                   	         (project root folder)
   +--game/
     +--casting/
       +--actor.py                (game class with methods)
-      +--artifact.py             (game class with methods)
       +--cast.py                 (game class with methods)
       +--gem.py                  (game class with methods)
       +--rock.py                 (game class with methods)
@@ -60,6 +59,6 @@ root                   	         (project root folder)
 * [Robert Odell](https://github.com/rodell1983)
 * [Wilson Romero](https://github.com/wilsonBYU)
 * [Nourcel Kaniki](https://github.com/Nourcel)
-* [Jens0n Smith](https://github.com/Jfunky11)
+* [Jenson Smith](https://github.com/Jfunky11)
 
 

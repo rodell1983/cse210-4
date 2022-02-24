@@ -79,7 +79,7 @@ def main():
     generate_ranges(Gem, DEFAULT_GEMS, '*', 'gems')
     generate_ranges(Rock, DEFAULT_ROCKS, 'o', 'rocks')
     keyboard_service = KeyboardService(CELL_SIZE)
-    video_service = VideoService(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE, True)
+    video_service = VideoService(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE)
     director = Director(keyboard_service, video_service)
     director.start_game(cast)
 

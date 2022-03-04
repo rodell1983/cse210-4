@@ -46,6 +46,7 @@ root                   	         (project root folder)
       +--color.py                (game class with methods)
       +--point.py                (game class with methods)
 
+
 ```
 
 ## Required Technologies
